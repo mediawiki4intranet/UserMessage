@@ -2,8 +2,8 @@
 
 /**
  * MediaWiki UserMessage extension
- * Copyright © 2009-2010 Vitaliy Filippov
- * http://yourcmc.ru/wiki/UserMessage_(MediaWiki)
+ * Copyright © 2009-2012 Vitaliy Filippov
+ * http://wiki.4intra.net/UserMessage
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,7 +31,12 @@
    MediaWiki:Edittools. Personalized messages will have names like
    MediaWiki:Edittools@UserName.
 
-   Non-compatible with stock 1.18 - requires adding NormalizeMessageKey hook to Message class.
+   ATTENTION:
+   Incompatible with stock MediaWiki (at least 1.18):
+   * Requires adding NormalizeMessageKey hook to Message class.
+   * Requires moving checkPermissionHooks to the end of getUserPermissionsErrorsInternal.
+
+   To use this extension, you should apply patch usermessage-extension.diff inside your document root.
 */
 
 /* INSTALLATION */
@@ -50,9 +55,9 @@
 
 $wgExtensionCredits['other'][] = array(
     'name'         => 'User Message',
-    'version'      => '2010-12-03',
+    'version'      => '2012-11-08',
     'author'       => 'Vitaliy Filippov',
-    'url'          => 'http://yourcmc.ru/wiki/index.php/UserMessage_(MediaWiki)',
+    'url'          => 'http://wiki.4intra.net/UserMessage',
     'description'  => 'Allows customization of MediaWiki:xxx messages on a per-user basis',
 );
 $wgHooks['NormalizeMessageKey'][] = 'efUserMessageNormalizeMessageKey';
