@@ -105,7 +105,6 @@ function efUserMessageNormalizeMessageKey(&$key, &$useDB, &$langCode, &$transfor
     elseif ($key == 'editinginterface' &&
         efUserMessageIsPersonalMessage($wgTitle))
     {
-        wfLoadExtensionMessages('UserMessage');
         /* We are editing a personal message */
         $key = 'editingpersonalinterface';
         $useDB = true;
