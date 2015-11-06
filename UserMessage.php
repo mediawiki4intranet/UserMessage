@@ -2,7 +2,7 @@
 
 /**
  * MediaWiki UserMessage extension
- * Copyright © 2009-2012 Vitaliy Filippov
+ * Copyright © 2009-2015 Vitaliy Filippov
  * http://wiki.4intra.net/UserMessage
  *
  * This program is free software; you can redistribute it and/or modify
@@ -36,7 +36,7 @@
    * Requires adding NormalizeMessageKey hook to Message class.
    * Requires moving checkPermissionHooks to the end of getUserPermissionsErrorsInternal.
 
-   To use this extension, you should apply patch usermessage-extension.diff inside your document root.
+   To use this extension, you should apply patch usermessage-extension-<VERSION>.diff inside your document root.
 */
 
 /* INSTALLATION */
