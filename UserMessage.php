@@ -112,7 +112,7 @@ function efUserMessageNormalizeMessageKey(&$key, &$useDB, &$langCode, &$transfor
     return true;
 }
 
-function efUserMessageAllowEditPersonalMessages(&$title, &$user, $action, &$result)
+function efUserMessageAllowEditPersonalMessages($title, $user, $action, &$result)
 {
     if (efUserMessageIsPersonalMessage($title) && ($action == 'edit' || $action == 'create'))
     {
